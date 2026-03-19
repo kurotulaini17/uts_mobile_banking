@@ -22,7 +22,7 @@ class BerandaBrimo extends StatelessWidget {
   const BerandaBrimo({super.key});
 
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
