@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Tes Update git
 void main() {
   runApp(const MyBrimoApp());
 }
@@ -38,80 +37,68 @@ class BerandaBrimo extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Container(
-                  height: 140,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFF00529C),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
+            //Background Biru
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(20),
+              decoration: const BoxDecoration(
+                color: Color(0xFF00529C),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text("Hai", style: TextStyle(color: Colors.white70)),
+                  Text(
+                    "SITI KUROTUL AINI",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
                   ),
-                ),
-                Positioned(
-                  top: 20,
-                  left: 20,
-                  right: 20,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Hai", style: TextStyle(color: Colors.white70)),
-                      Text(
-                        "SITI KUROTUL AINI",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                      const SizedBox(height: 15),
+                  const SizedBox(height: 20),
 
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                          boxShadow: [
-                            BoxShadow(color: Colors.black12, blurRadius: 5),
-                          ],
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Container(
+                    padding: const EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  "Saldo Rekening Utama",
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                const Text(
-                                  "Rp 5.750.000",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ],
+                            Text(
+                              "Saldo Rekening Utama",
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 16,
+                              ),
                             ),
-                            const Icon(
-                              Icons.visibility_off,
-                              color: Color(0xFF00529C),
+                            Text(
+                              "Rp 5.750.000",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
+                        Icon(Icons.visibility_off, color: Color(0xFF00529C)),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
 
-            const SizedBox(height: 70),
+            const SizedBox(height: 25),
 
             // Menu Grid
             Padding(
@@ -161,6 +148,7 @@ class BerandaBrimo extends StatelessWidget {
           ],
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: const Color(0xFF00529C),
         type: BottomNavigationBarType.fixed,
