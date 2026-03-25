@@ -37,68 +37,70 @@ class BerandaBrimo extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Bagian Biru Atas
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(20),
-              decoration: const BoxDecoration(
-                color: Color(0xFF00529C),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  height: 100,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF00529C),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ),
                 ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Selamat Siang,",
-                    style: TextStyle(color: Colors.white70),
-                  ),
-                  const Text(
-                    "SITI KUROTUL AINI",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Container(
-                    padding: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Saldo Rekening",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 16,
-                              ),
-                            ),
-                            Text(
-                              "Rp 5.750.000",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Hai", style: TextStyle(color: Colors.white70)),
+                      Text(
+                        "SITI KUROTUL AINI",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
-                        Icon(Icons.visibility_off, color: Color(0xFF00529C)),
+                      ),
+                      const SizedBox(height: 15),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Container(
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 5)],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Saldo Rekening Utama",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        const Text(
+                          "Rp 5.750.000",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
-                  ),
-                ],
+                    const Icon(Icons.visibility_off, color: Color(0xFF00529C)),
+                  ],
+                ),
               ),
             ),
+
             const SizedBox(height: 25),
             // Menu Grid
             Padding(
@@ -142,7 +144,7 @@ class BerandaBrimo extends StatelessWidget {
                   color: Colors.blue[50],
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Center(child: Text("Promo Khusus Mahasiswa")),
+                child: const Center(child: Text("Promo Khusus")),
               ),
             ),
           ],
