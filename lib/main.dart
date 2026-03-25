@@ -42,7 +42,7 @@ class BerandaBrimo extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  height: 100,
+                  height: 140,
                   decoration: const BoxDecoration(
                     color: Color(0xFF00529C),
                     borderRadius: BorderRadius.only(
@@ -51,8 +51,10 @@ class BerandaBrimo extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(20),
+                Positioned(
+                  top: 20,
+                  left: 20,
+                  right: 20,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -62,47 +64,55 @@ class BerandaBrimo extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
+                          fontSize: 18,
                         ),
                       ),
                       const SizedBox(height: 15),
+
+                      Container(
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(color: Colors.black12, blurRadius: 5),
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Saldo Rekening Utama",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                const Text(
+                                  "Rp 5.750.000",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Icon(
+                              Icons.visibility_off,
+                              color: Color(0xFF00529C),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Container(
-                padding: const EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 5)],
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Saldo Rekening Utama",
-                          style: TextStyle(color: Colors.grey),
-                        ),
-                        const Text(
-                          "Rp 5.750.000",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    const Icon(Icons.visibility_off, color: Color(0xFF00529C)),
-                  ],
-                ),
-              ),
-            ),
+            const SizedBox(height: 70),
 
-            const SizedBox(height: 25),
             // Menu Grid
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
